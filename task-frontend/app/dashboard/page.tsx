@@ -41,7 +41,7 @@ export default function Dashboard() {
   const fetchTasks = async () => {
     const userId = localStorage.getItem('user_id');
     try {
-      const res = await fetch(`http://localhost:5000/tasks/${userId}`);
+      const res = await fetch(`https://shheraspaceproject.onrender.com/tasks/${userId}`);
       const data = await res.json();
       setTasks(data);
     } catch (error) {
@@ -56,7 +56,7 @@ export default function Dashboard() {
     
     setAdding(true);
     try {
-      await fetch('http://localhost:5000/tasks', {
+      await fetch('https://shheraspaceproject.onrender.com/tasks', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -77,7 +77,7 @@ export default function Dashboard() {
 
   const toggleStatus = async (taskId: number, currentStatus: boolean) => {
     try {
-      await fetch(`http://localhost:5000/tasks/${taskId}`, {
+      await fetch(`https://shheraspaceproject.onrender.com/tasks/${taskId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ status: !currentStatus })
@@ -93,7 +93,7 @@ export default function Dashboard() {
     if (!confirm('Are you sure you want to delete this task?')) return;
 
     try {
-      await fetch(`http://localhost:5000/tasks/${taskId}`, {
+      await fetch(`https://shheraspaceproject.onrender.com/tasks/${taskId}`, {
         method: 'DELETE'
       });
       fetchTasks();
@@ -131,7 +131,7 @@ export default function Dashboard() {
 
   const saveEdit = async (task: Task) => {
     try {
-      await fetch(`http://localhost:5000/tasks/${task.id}`, {
+      await fetch(`https://shheraspaceproject.onrender.com/tasks/${task.id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

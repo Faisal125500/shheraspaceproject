@@ -86,4 +86,4 @@ MIT
 
 ---
 
-**Made with ❤️ by Faisal Ahmed** 
+**Made with ❤️ by Faisal Ahmed**

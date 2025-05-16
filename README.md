@@ -58,32 +58,5 @@ A modern, full-stack task management application built with **Flask** (Python) f
     ```
     The app will be available at `http://localhost:3000`.
 
-## Deployment
-
-### Backend (Render)
-
-- Push your backend code to GitHub.
-- Create a new Web Service on [Render](https://render.com/).
-- Set the build command: `pip install -r requirements.txt`
-- Set the start command: `gunicorn app:app`
-- Add environment variables as needed.
-
-### Frontend (Vercel)
-
-- Push your frontend code to GitHub.
-- Import your repo on [Vercel](https://vercel.com/).
-- Set the project root to `task-frontend`.
-- Set `NEXT_PUBLIC_API_URL` to your Render backend URL in Vercel's environment variables.
-- Deploy!
-
-## Screenshots
-
-_Add screenshots here if you like!_
-
-## License
-
-MIT
-
----
 
 **Made with ❤️ by Faisal Ahmed**
